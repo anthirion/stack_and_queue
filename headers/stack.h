@@ -22,6 +22,7 @@ void push(stack* pst, const int element);
 void pop(stack* pst);
 int top(const stack st);
 bool isEmpty(const stack st);
+int get_length(const stack st);
 void freeStack(stack* pst);
 
 #endif

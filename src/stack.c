@@ -61,6 +61,10 @@ bool isEmpty(const stack st) {
         return false;
 }
 
+int get_length(const stack st) {
+    return st.length;
+}
+
 void freeStack(stack* pst) {
     free(pst->stack_ptr);
     pst->length = 0;
