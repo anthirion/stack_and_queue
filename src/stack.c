@@ -21,7 +21,7 @@ void push(stack* pst, int element) {
             for (int i=0; i < pst->max_length/2; i++)
                 new_stack_ptr[i] = pst->stack_ptr[i];
             // Free the old stack
-            freeStack(pst);
+            free(pst->stack_ptr);
             // Update the stack pointer
             pst->stack_ptr = new_stack_ptr;
         }
@@ -32,7 +32,7 @@ void push(stack* pst, int element) {
         }
     }
     // Add the element at the end
-    pst->stack_ptr[pst->length] = element;
+    pst->stack_ptr[pst->length - 1] = element;
 }
 
 stack create_stack(const int* elements_array, const int length) {
@@ -52,7 +52,7 @@ void pop(stack* pst) {
 }
 
 int top(const stack st) {
-    return st.stack_ptr[st.length];
+    return st.stack_ptr[st.length - 1];
 }
 
 bool isEmptyStack(const stack st) {
