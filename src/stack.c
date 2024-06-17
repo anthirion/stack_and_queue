@@ -1,3 +1,4 @@
+#include "global.h"
 #include "stack.h"
 
 stack init_stack() {
@@ -54,14 +55,14 @@ int top(const stack st) {
     return st.stack_ptr[st.length];
 }
 
-bool isEmpty(const stack st) {
+bool isEmptyStack(const stack st) {
     if (st.length == 0)
         return true;
     else
         return false;
 }
 
-int get_length(const stack st) {
+int get_stack_length(const stack st) {
     return st.length;
 }
 
