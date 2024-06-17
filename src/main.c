@@ -26,13 +26,15 @@ int main() {
     /*
     * Test queue operations
     */
-//    queue q = create_queue(elements_array, 12);
-//    enqueue(&q, 5);
-//    dequeue(&q);
-//    dequeue(&q);
-//    printf("The next element of the queue is: %d\n", first(q));
-//    printf("The last queued element is: %d\n", last(q));
-//    freeQueue(&q);
+    queue q = create_queue(elements_array, 12);
+    enqueue(&q, 5);
+    dequeue(&q);
+    dequeue(&q);
+    printf("The next element of the queue is: %d\n", first(q));
+    printf("The last queued element is: %d\n", last(q));
+    printf("The queue is empty: %s\n", isEmptyQueue(q) ? "true" : "false");
+    printf("The queue has %d elements\n", get_queue_length(q));
+    freeQueue(&q);
 
     return 0;
 }

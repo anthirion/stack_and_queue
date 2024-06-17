@@ -21,7 +21,7 @@ void enqueue(queue* pq, int element) {
             for (int i=0; i < pq->max_length/2; i++)
                 new_queue_ptr[i] = pq->queue_ptr[i];
             // Free the old queue
-            freeQueue(pq);
+            free(pq->queue_ptr);
             // Update the queue pointer
             pq->queue_ptr = new_queue_ptr;
         }
