@@ -10,7 +10,7 @@ int main() {
     * Test stack operations
     */
     // int elements_array[6] = {1, 4, 9, 12, -5, -8};
-    // array that has more element that the default size
+    // array that has more element that the default max length
     int elements_array[12] = {1, 4, 9, 12, -5, -8, 3, 98, 22, 44, 42, 65};
 
     stack st = create_stack(elements_array, 12);
